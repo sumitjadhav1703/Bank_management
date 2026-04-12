@@ -1,4 +1,9 @@
-from bank_ui_helpers import build_dashboard_stats, validate_account_input
+from bank_ui_helpers import (
+    build_dashboard_stats,
+    format_account_details,
+    format_currency,
+    validate_account_input,
+)
 
 
 def test_build_dashboard_stats_returns_expected_summary():
@@ -76,3 +81,22 @@ def test_validate_account_input_handles_integer_pin_safely():
     message = validate_account_input(name="Sumit", age=23, email="sumit@example.com", pin=1234)
 
     assert message == ""
+
+
+def test_format_currency_uses_rupee_style_output():
+    assert format_currency(42000) == "Rs 42,000"
+
+
+def test_format_account_details_returns_label_value_pairs():
+    user = {
+        "name": "Sumit",
+        "age": 20,
+        "email": "sumit@example.com",
+        "accountNo": "AB12CD34",
+        "balance": 42000,
+    }
+
+    details = format_account_details(user)
+
+    assert details["Account Number"] == "AB12CD34"
+    assert details["Balance"] == "Rs 42,000"

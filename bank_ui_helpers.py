@@ -12,6 +12,20 @@ def build_dashboard_stats(data):
     }
 
 
+def format_currency(amount):
+    return f"Rs {amount:,.0f}"
+
+
+def format_account_details(user):
+    return {
+        "Account Number": user["accountNo"],
+        "Name": user["name"],
+        "Age": str(user["age"]),
+        "Email": user["email"] or "Not provided",
+        "Balance": format_currency(user["balance"]),
+    }
+
+
 def validate_account_input(name, age, email, pin):
     """Validate account form input and return a user-facing error message."""
 
