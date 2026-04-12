@@ -1,79 +1,124 @@
-🏦 Bank Management System
+# Bank Management System
 
-A Bank Management System built using Python that allows users to manage bank accounts efficiently, including creating accounts, deposits, withdrawals, viewing account details, and deleting accounts. This project demonstrates real-world banking operations and file-based data storage.
+> A dual-interface banking project that shows the same core account workflow through a Python CLI and a polished Streamlit dashboard.
 
-📌 Project Overview
+## Why This Project Stands Out
 
-This system simulates core banking operations and helps manage customer account data securely. It is designed for learning purposes and demonstrates concepts such as:
-File handling
-Object-oriented programming (OOP)
-Data validation
-User authentication logic
+| Strength | What it shows |
+| --- | --- |
+| Dual interface design | The same banking workflow can be presented in both terminal-first and recruiter-friendly UI form |
+| JSON persistence | Practical use of lightweight local storage without adding unnecessary complexity |
+| Real account operations | Account creation, deposits, withdrawals, detail lookup, updates, and deletion |
+| Validation and UX thinking | Input checks, formatted feedback, and cleaner flow for demos |
 
-⚙️ Features
+## Project Overview
 
-Create new bank accounts
-View account details
-Deposit money
-Withdraw money
-Update customer information
-Delete bank accounts
-Store data persistently in JSON files
-Simple and user-friendly CLI interface
+This project simulates a lightweight bank management system for learning and portfolio use. It keeps the data model simple with `data.json`, while showing two ways to interact with the same banking logic:
 
-🛠️ Technologies Used
+- `CLI experience` for direct Python workflow practice
+- `Streamlit dashboard` for a more visual, recruiter-friendly demo
 
-Python
-JSON for data storage
-VS Code (Recommended IDE)
+## Experience Modes
 
-📂 Project Structure
+### 1. CLI Banking Workflow
+
+The CLI version in `main.py` highlights:
+
+- Python control flow
+- file handling with JSON
+- account validation logic
+- CRUD-style account management
+
+It is useful for showing the raw logic of the application without hiding the workflow behind UI layers.
+
+### 2. Streamlit Banking Dashboard
+
+The Streamlit version in `bank_app.py` highlights:
+
+- a portfolio-style dashboard layout
+- account summary metrics
+- structured action flows
+- cleaner feedback and formatted account details
+
+It is designed to make the project easier to demo on GitHub or during interviews.
+
+## Core Features
+
+- Create a new account with age and PIN validation
+- Deposit money into an existing account
+- Withdraw money with balance checks
+- View formatted account details
+- Update customer name, email, and PIN
+- Delete an account with confirmation flow
+- Persist all records locally in `data.json`
+
+## Tech Stack
+
+- Python
+- Streamlit
+- JSON
+- Pytest
+
+## Project Structure
+
+```text
 Bank_management/
-│
-├── main.py              # Main program file
-├── bank_data.json       # Stores customer account data
-├── README.md            # Project documentation
-└── other files/modules  # Supporting scripts
+├── bank_app.py              # Streamlit dashboard interface
+├── bank_ui_helpers.py       # Reusable formatting and validation helpers
+├── data.json                # Local JSON datastore
+├── main.py                  # CLI banking workflow
+├── README.md                # Project documentation
+└── tests/
+    ├── conftest.py
+    └── test_bank_ui_helpers.py
+```
 
-▶️ How to Run the Project
+## Run The Project
 
 Clone the repository:
-    git clone https://github.com/sumitjadhav1703/Bank_management
-Navigate into the project folder:
-    cd Bank_management
-Run the program:
-    python main.py
 
-🧠 Learning Objectives
+```bash
+git clone https://github.com/sumitjadhav1703/Bank_management.git
+cd Bank_management
+```
 
-Understand real-world banking workflows
-Practice Python OOP concepts
-Learn JSON-based file data handling
-Improve logical problem-solving skills
+Run the CLI version:
 
-🚀 Future Improvements
+```bash
+python3 main.py
+```
 
-Add GUI using Tkinter or PyQt
-Add database support (MySQL / SQLite)
-Implement user login & security features
-Add transaction history tracking
-Improve UI and reporting system
+Run the Streamlit dashboard:
 
-🤝 Contributing
+```bash
+streamlit run bank_app.py
+```
 
-Contributions are welcome!
-If you'd like to improve this project, feel free to fork and submit a pull request.
+## Data Storage
 
-📜 License
+All account records are stored locally in `data.json`. This keeps the project easy to understand and portable, while still demonstrating persistent state across runs.
 
-This project is licensed under the MIT License.
+## What Recruiters Can Notice
 
-👨‍💻 Author
+- the project solves one problem through two different interfaces
+- helper functions are separated from presentation code
+- the Streamlit app adds polish without replacing the underlying Python workflow
+- tests cover validation and display helper behavior
 
-Sumit Jadhav
-AI & Data Science Student
-GitHub: https://github.com/sumitjadhav1703
+## Future Improvements
 
-⭐ Support
+- Add transaction history records
+- Add database-backed persistence with SQLite or MySQL
+- Add authentication for account access
+- Add analytics or charts for account activity
+- Add exportable reporting
 
-If you like this project, don’t forget to star the repository ⭐
+## Author
+
+**Sumit Jadhav**  
+AI & Data Science Student  
+[GitHub](https://github.com/sumitjadhav1703)
+
+## Support
+
+If you like the project, consider starring the repository.
