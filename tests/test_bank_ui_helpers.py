@@ -17,6 +17,27 @@ def test_build_dashboard_stats_returns_expected_summary():
     }
 
 
+def test_build_dashboard_stats_returns_zeros_for_empty_data():
+    assert build_dashboard_stats([]) == {
+        "total_accounts": 0,
+        "total_balance": 0,
+        "average_balance": 0,
+        "highest_balance": 0,
+    }
+
+
+def test_validate_account_input_rejects_missing_required_fields():
+    message = validate_account_input(name=" ", age=23, email="", pin="1234")
+
+    assert message == "Name and email are required."
+
+
+def test_validate_account_input_accepts_valid_input():
+    message = validate_account_input(name="Sumit", age=23, email="sumit@example.com", pin="1234")
+
+    assert message == ""
+
+
 def test_validate_account_input_rejects_underage_and_bad_pin():
     message = validate_account_input(name="Sumit", age=17, email="sumit@example.com", pin="12")
 

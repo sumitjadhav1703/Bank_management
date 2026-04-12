@@ -1,6 +1,3 @@
-from __future__ import annotations
-
-
 def build_dashboard_stats(data):
     balances = [user.get("balance", 0) for user in data]
     total_balance = sum(balances)
