@@ -1,32 +1,55 @@
-# Bank Management System
+# 🏦 Bank Management System
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 > A dual-interface banking project that shows the same core account workflow through a Python CLI and a polished Streamlit dashboard.
 
-## Why This Project Stands Out
+---
+
+## 📑 Table of Contents
+
+- [Why This Project Stands Out](#-why-this-project-stands-out)
+- [Project Overview](#-project-overview)
+- [Experience Modes](#-experience-modes)
+- [Core Features](#-core-features)
+- [Tech Stack](#-tech-stack)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Data Storage](#-data-storage)
+- [What Recruiters Can Notice](#-what-recruiters-can-notice)
+- [Future Improvements](#-future-improvements)
+- [Author](#-author)
+- [Support](#-support)
+
+---
+
+## 🌟 Why This Project Stands Out
 
 | Strength | What it shows |
 | --- | --- |
-| Dual interface design | The same banking workflow can be presented in both terminal-first and recruiter-friendly UI form |
-| JSON persistence | Practical use of lightweight local storage without adding unnecessary complexity |
-| Real account operations | Account creation, deposits, withdrawals, detail lookup, updates, and deletion |
-| Validation and UX thinking | Input checks, formatted feedback, and cleaner flow for demos |
+| **Dual interface design** | The same banking workflow can be presented in both terminal-first and recruiter-friendly UI form. |
+| **JSON persistence** | Practical use of lightweight local storage without adding unnecessary complexity. |
+| **Real account operations** | Account creation, deposits, withdrawals, detail lookup, updates, and deletion. |
+| **Validation and UX thinking** | Input checks, formatted feedback, and cleaner flow for demos. |
 
-## Project Overview
+## 📖 Project Overview
 
 This project simulates a lightweight bank management system for learning and portfolio use. It keeps the data model simple with `data.json`, while showing two ways to interact with the same banking logic:
 
 - `CLI experience` for direct Python workflow practice
 - `Streamlit dashboard` for a more visual, recruiter-friendly demo
 
-## Experience Modes
+## 💻 Experience Modes
 
 ### 1. CLI Banking Workflow
 
 The CLI version in `main.py` highlights:
 
 - Python control flow
-- file handling with JSON
-- account validation logic
+- File handling with JSON
+- Account validation logic
 - CRUD-style account management
 
 It is useful for showing the raw logic of the application without hiding the workflow behind UI layers.
@@ -35,31 +58,31 @@ It is useful for showing the raw logic of the application without hiding the wor
 
 The Streamlit version in `bank_app.py` highlights:
 
-- a portfolio-style dashboard layout
-- account summary metrics
-- structured action flows
-- cleaner feedback and formatted account details
+- A portfolio-style dashboard layout
+- Account summary metrics
+- Structured action flows
+- Cleaner feedback and formatted account details
 
 It is designed to make the project easier to demo on GitHub or during interviews.
 
-## Core Features
+## ✨ Core Features
 
-- Create a new account with age and PIN validation
-- Deposit money into an existing account
-- Withdraw money with balance checks
-- View formatted account details
-- Update customer name, email, and PIN
-- Delete an account with confirmation flow
-- Persist all records locally in `data.json`
+- **Create a new account** with age and PIN validation.
+- **Deposit money** into an existing account.
+- **Withdraw money** with balance checks.
+- **View formatted account details**.
+- **Update** customer name, email, and PIN.
+- **Delete** an account with a confirmation flow.
+- **Persist all records** locally in `data.json`.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- Python
-- Streamlit
-- JSON
-- Pytest
+- **Language:** Python
+- **Framework:** Streamlit
+- **Data Storage:** JSON
+- **Testing:** Pytest
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
 Bank_management/
@@ -73,7 +96,17 @@ Bank_management/
     └── test_bank_ui_helpers.py
 ```
 
-## Run The Project
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have Python installed, then install the required dependencies:
+
+```bash
+pip install streamlit pytest
+```
+
+### Installation & Run
 
 Clone the repository:
 
@@ -82,43 +115,43 @@ git clone https://github.com/sumitjadhav1703/Bank_management.git
 cd Bank_management
 ```
 
-Run the CLI version:
+Run the **CLI version**:
 
 ```bash
-python3 main.py
+python main.py
 ```
 
-Run the Streamlit dashboard:
+Run the **Streamlit dashboard**:
 
 ```bash
 streamlit run bank_app.py
 ```
 
-## Data Storage
+## 💾 Data Storage
 
 All account records are stored locally in `data.json`. This keeps the project easy to understand and portable, while still demonstrating persistent state across runs.
 
-## What Recruiters Can Notice
+## 👀 What Recruiters Can Notice
 
-- the project solves one problem through two different interfaces
-- helper functions are separated from presentation code
-- the Streamlit app adds polish without replacing the underlying Python workflow
-- tests cover validation and display helper behavior
+- The project solves one problem through two different interfaces.
+- Helper functions are separated from presentation code.
+- The Streamlit app adds polish without replacing the underlying Python workflow.
+- Tests cover validation and display helper behavior.
 
-## Future Improvements
+## 🔮 Future Improvements
 
-- Add transaction history records
-- Add database-backed persistence with SQLite or MySQL
-- Add authentication for account access
-- Add analytics or charts for account activity
-- Add exportable reporting
+- [ ] Add transaction history records
+- [ ] Add database-backed persistence with SQLite or MySQL
+- [ ] Add authentication for account access
+- [ ] Add analytics or charts for account activity
+- [ ] Add exportable reporting
 
-## Author
+## 👨‍💻 Author
 
 **Sumit Jadhav**  
 AI & Data Science Student  
 [GitHub](https://github.com/sumitjadhav1703)
 
-## Support
+## 💖 Support
 
-If you like the project, consider starring the repository.
+If you like the project, consider starring the repository. ⭐
